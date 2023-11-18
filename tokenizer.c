@@ -13,7 +13,7 @@ char **my_strtok(char *buffer)
 	char **arguments = NULL;
 	int token_count = 1, i = 0;
 
-	copy = my_strdup(buffer);
+	copy = strdup(buffer);
 	strtok(copy, delimiter);
 	while ((strtok(NULL, delimiter)) != NULL)
 		token_count++;
@@ -23,7 +23,7 @@ char **my_strtok(char *buffer)
 
 	while (ARGUMENT != NULL)
 	{
-		arguments[i] = my_strdup(ARGUMENT);
+		arguments[i] = strdup(ARGUMENT);
 		i++;
 		ARGUMENT = strtok(NULL, delimiter);
 	}

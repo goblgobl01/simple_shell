@@ -22,12 +22,12 @@ int execute_builtin(char **arguments, char **envp);
 char *checkCommandPath(const char *path);
 char *_strchr(const char *str, char character);
 
-/*strings function*/
+/*strings function
 char *my_strcat(char *dester, char *scrcat);
 int my_strcmp(char *str1, char *str2);
 char *my_strcpy(char *dest, char *src);
 char *my_strdup(const char *string);
-int my_strlen(char *string);
+int my_strlen(char *string);*/
 
 
 #endif

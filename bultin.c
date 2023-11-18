@@ -11,12 +11,12 @@ if (arguments[0] == NULL)
 {
 return (1);
 }
-else if (my_strcmp(arguments[0], "exit") == 0)
+else if (strcmp(arguments[0], "exit") == 0)
 {
 free_tokens(arguments);
 exit(0);
 }
-else if (my_strcmp(arguments[0], "env") == 0)
+else if (strcmp(arguments[0], "env") == 0)
 {
 char **env = envp;
 while (*env != NULL)

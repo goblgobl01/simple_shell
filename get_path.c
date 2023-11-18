@@ -26,14 +26,14 @@ return (NULL);
 sub_path = strtok(PATH, delim);
 while (sub_path != NULL)
 {
-path_len = my_strlen(sub_path);
-arg_len = my_strlen(argument);
+path_len = strlen(sub_path);
+arg_len = strlen(argument);
 command_path = malloc(arg_len + path_len + 2);
 if (command_path)
 {
-my_strcpy(command_path, sub_path);
-my_strcat(command_path, "/");
-my_strcat(command_path, argument);
+strcpy(command_path, sub_path);
+strcat(command_path, "/");
+strcat(command_path, argument);
 if (stat(command_path, &checker) == 0)
 {
 free(PATH);

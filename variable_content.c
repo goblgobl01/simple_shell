@@ -13,12 +13,12 @@ int i = 0;
 
 while (envp[i])
 {
-copy = my_strdup(envp[i]);
+copy = strdup(envp[i]);
 storage = strtok(copy, "=");
-if (my_strcmp(storage, environment_variable) == 0)
+if (strcmp(storage, environment_variable) == 0)
 {
 storage = strtok(NULL, "\n");
-content = my_strdup(storage);
+content = strdup(storage);
 free(copy);
 return (content);
 }
